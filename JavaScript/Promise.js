@@ -10,7 +10,7 @@ function getData() {
     return new Promise(function(resolve, reject) {
       $.get('https://jsonplaceholder.typicode.com/users/1', function(response) {
         if (response) {
-          resolve(response);
+          resolve(response);    // 여기가 호출되면 아래 reject는 호출되지 않는다.
         }
         reject(new Error("Request is failed"));
       });
